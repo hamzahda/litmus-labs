@@ -19,3 +19,31 @@ afterwards check and wait for ChaosOperator to be installed and up and running
 ```sh
 kubectl get pods -n litmus  -w
 ```
+Check if chaos CRDs are installed & the api-resources are created for the same
+```sh
+kubectl get crds | grep litmus
+```
+
+
+
+```sh
+kubectl get api-resources | grep litmus
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+Check if the roles nd rolebinding resources are created as wanted
+```sh
+kubectl get clusterrole,clusterrolebinding | grep litmus
+```
+
